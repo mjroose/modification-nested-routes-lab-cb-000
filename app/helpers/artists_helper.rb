@@ -4,7 +4,7 @@ module ArtistsHelper
   end
 
   def artist_select(artist_id, artist)
-    label_tag "Artist Name"
+    label_tag :artist_id
     if artist_id
       hidden_field_tag :artist_id
       content_tag :p, artist.name
