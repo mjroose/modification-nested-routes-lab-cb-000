@@ -25,7 +25,12 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if params[:artist_id] && Artist.exists?(params[:artist_id])
+      @song = Artist.find(params[:artist_id]).songs.new
+    else
+      @song = Song.new
+
+    end
   end
 
   def create
