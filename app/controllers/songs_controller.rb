@@ -61,7 +61,6 @@ class SongsController < ApplicationController
       end
     elsif Song.exists?(params[:id])
       @song = Song.find(params[:id])
-      @artists = Artist.all
     else
       redirect_to songs_path
     end
