@@ -4,6 +4,7 @@ module ArtistsHelper
   end
 
   def artist_select(artist_id, artist)
+    binding.pry
     if artist_id
       hidden_field_tag :artist_id
       content_tag :p, artist.name
