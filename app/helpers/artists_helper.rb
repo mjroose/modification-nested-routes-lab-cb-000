@@ -9,7 +9,7 @@ module ArtistsHelper
       hidden_field_tag :artist_id
       content_tag :p, artist.name
     else
-      select_tag :id, options_from_collection_for_select(Artist.all, :id, :name)
+      select_tag "song[artist_id]", options_from_collection_for_select(Artist.all, :id, :name)
     end
   end
 end
